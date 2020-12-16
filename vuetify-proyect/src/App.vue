@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="contenedor-main">
     <div v-if="estado">
-      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-secondary mt-2 mb-2">
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark p-4 mt-2 mb-2">
         <a class="navbar-brand" href="# ">
           <img
-            src="./assets/images/canequita.png"
+            src="./assets/images/canequita2.png"
             width="30"
             height="30"
             class="d-inline-block align-top"
@@ -321,5 +321,13 @@ export default {
 
 body{
   width: 1200px;
+}
+
+.contenedor-main {
+	  background-image: linear-gradient(to right, #016AAB 0%, #005085 100%);
+	box-shadow: 0px 0px 20px black;
+	z-index: 12;
+	position: relative;
+	border-radius: 10;
 }
 </style>

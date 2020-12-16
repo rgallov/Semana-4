@@ -5,6 +5,7 @@ import Categoria from '../components/Categoria.vue';
 import Login from '../components/Login.vue';
 import store from '../store/index';
 import Articulo from '../components/Articulo.vue';
+import Usuario from '../components/Usuario.vue';
 
 
 Vue.use(VueRouter);
@@ -42,6 +43,16 @@ const routes = [{
         path: "/articulo",
         name: "articulo",
         component: Articulo,
+        meta: {
+            auth: true
+        }
+
+    },
+
+    {
+        path: "/usuario",
+        name: "usuario",
+        component: Usuario,
         meta: {
             auth: true
         }

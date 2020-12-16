@@ -12,6 +12,7 @@
             loading="lazy "
           />
           <b>  CANEQUITAS</b>
+
         </a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
           <ul class="navbar-nav">
@@ -316,5 +317,9 @@ export default {
 
 .imagen_calidad {
   width: 95%;
+}
+
+body{
+  width: 1200px;
 }
 </style>

@@ -1,0 +1,34 @@
+{
+    "casos": [
+        {
+            "codigo": "1",
+            "nombre": "Empresa Distribuidora RecycleTrash",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum ac elit et accumsan.",
+            "imagen":"images/company1.png"
+        },
+        {
+            "codigo": "2",
+            "nombre": "Almacenes Success",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum ac elit et accumsan.",
+            "imagen":"images/company2.jpg"
+        },
+        {
+            "codigo": "3",
+            "nombre": "Olimpico Supermercados",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum ac elit et accumsan.",
+            "imagen":"images/company3.jpg"
+        },
+        {
+            "codigo": "4",
+            "nombre": "Recycle Trash Dealer",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum ac elit et accumsan.",
+            "imagen":"images/company4.jpg"
+        },
+        {
+            "codigo": "5",
+            "nombre": "Recicladores Unidos SAS",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum ac elit et accumsan.",
+            "imagen":"images/company5.jpg"
+        }
+    ]
+}

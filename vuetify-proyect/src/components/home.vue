@@ -54,7 +54,7 @@
             v-for="miembro in casos"
             :key="miembro.codigo"
             :member="miembro"
-            class="col"
+            class="col mt-1"
           ></CasoCard>
         </div>
       </div>

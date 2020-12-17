@@ -1,132 +1,134 @@
 <template>
   <div class="contenedor-main">
     <div v-if="estado">
-      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark p-4 mt-2 mb-2">
-        <a class="navbar-brand" href="# ">
-          <img
-            src="./assets/images/canequita2.png"
-            class="d-inline-block align-top nav_icon"
-            alt="Canequitas"
-            loading="lazy "
-          />
-          <b>  CANEQUITAS</b>
+      <header>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark p-4 mt-2 mb-2">
+          <a class="navbar-brand" href="# ">
+            <img
+              src="./assets/images/canequita2.png"
+              class="d-inline-block align-top nav_icon"
+              alt="Canequitas"
+              loading="lazy "
+            />
+            <b>  CANEQUITAS</b>
 
-        </a>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-                          <a class="nav-link" href="#who">Qué hacemos</a>
-                          <!-- <a href="#" class="main-menu__link">Servicios</a> -->
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#products">Productos</a>
-                          <!-- <a href="#" class="main-menu__link">Noticias</a> -->
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#cases">Casos</a>
-                      </li>
-            <li class="nav-item active">
-              <a id="btn-sistema" class="nav-link" v-on:click="ingresar" href="# "
-                ><b>Sistema</b> <span class="sr-only">(current)</span></a
+          </a>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="#who">Qué hacemos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#products">Productos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#cases">Casos</a>
+              </li>
+              <li class="nav-item active">
+                <a id="btn btn-outline-dark btn-sistema" class="nav-link" v-on:click="ingresar" href="# "
+                  ><b>Sistema</b> <span class="sr-only">(current)</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleCaptions"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/images/banner1.jpg" alt="Banner 1" class="imagen" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/camareciclaje.jpg" alt="Banner 2" class="imagen" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Creativas camas con viejos neumaticos</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/banner3.jpg" alt="Banner 3" class="imagen" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </header>
+      <main>
+        <section id="who">
+          <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="dark col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <h2 class="bold">Qué hacemos</h2>
+            </div>
+          </div>
+          <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
+            <div class="col-md-6 px-0">
+              <div>
+                <img
+                  src="./assets/images/calidad.jpg"
+                  alt="Contenedores"
+                  class="imagen_calidad"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 px-0">
+            <h3 class="display-5 font-italic">
+              CONTENEDORES DE BASURA. APRENDA A UTILIZARLOS CORRECTAMENTE
+            </h3>
+            <p class="lead my-3">
+              Es común que en la actualidad a las personas se les dificulte reciclar, muchas
+              veces este problema nace de la imposibilidad por comprender los usos de los
+              colores que se utiliza para identificar los contenedores de basura, tener una
+              plena identificación de las canecas de reciclaje nos ayuda a facilitar este
+              proceso; además es importante que el reciclaje se convierta en un hábito
+              diario de la mayoría de las personas.
+            </p>
+            <p class="lead mb-0">
+              <a
+                href="https://canecasdereciclaje.com/noticias/canecas-de-reciclaje-blog/contenedores-de-basura-aprenda-a-utilizarlos-correctamente/"
+                class="text-primary font-weight-bold"
+                target="_blank"
+                >Leer más...</a
               >
-            </li>
-          </ul>
+            </p>
+          </div>
+          </div>        
+        </section>
+        <div>
+          <home/>
         </div>
-      </nav>
-      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleCaptions"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./assets/images/banner1.jpg" alt="Banner 1" class="imagen" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/images/camareciclaje.jpg" alt="Banner 2" class="imagen" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Creativas camas con viejos neumaticos</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/images/banner3.jpg" alt="Banner 3" class="imagen" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
-          </div>
-        </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleCaptions"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleCaptions"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-      <section id="who">
-        <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <div class="dark col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <h2 class="bold">Qué hacemos</h2>
-          </div>
-        </div>
-        <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
-          <div class="col-md-6 px-0">
-            <div>
-              <img
-                src="./assets/images/calidad.jpg"
-                alt="Contenedores"
-                class="imagen_calidad"
-              />
-            </div>
-          </div>
-          <div class="col-md-6 px-0">
-          <h3 class="display-5 font-italic">
-            CONTENEDORES DE BASURA. APRENDA A UTILIZARLOS CORRECTAMENTE
-          </h3>
-          <p class="lead my-3">
-            Es común que en la actualidad a las personas se les dificulte reciclar, muchas
-            veces este problema nace de la imposibilidad por comprender los usos de los
-            colores que se utiliza para identificar los contenedores de basura, tener una
-            plena identificación de las canecas de reciclaje nos ayuda a facilitar este
-            proceso; además es importante que el reciclaje se convierta en un hábito
-            diario de la mayoría de las personas.
-          </p>
-          <p class="lead mb-0">
-            <a
-              href="https://canecasdereciclaje.com/noticias/canecas-de-reciclaje-blog/contenedores-de-basura-aprenda-a-utilizarlos-correctamente/"
-              class="text-primary font-weight-bold"
-              target="_blank"
-              >Leer más...</a
-            >
-          </p>
-        </div>
-        </div>        
-      </section>
-      <div>
-        <home/>
-      </div>
+      </main>
       <footer class="bg-light text-white">
         <!-- Footer Text -->
         <div class="content text-dark">
@@ -345,15 +347,17 @@ body{
 }
 
 .contenedor-main {
-	  background-image: linear-gradient(to right, #016AAB 0%, #005085 100%);
+	/* background-image: linear-gradient(to right, #016AAB 0%, #005085 100%); */
 	box-shadow: 0px 0px 20px black;
 	z-index: 12;
 	position: relative;
-	border-radius: 10;
+  border-radius: 10;
+  width: 1200px;
+  margin: auto;
 }
 
 #btn-sistema{
-	background-color: #black;
+	  background-color: #black;
     border-radius: 0px 0px 4px 4px;
     display: inline-block;
     padding: 6px 11px;

@@ -19,6 +19,14 @@
             <li class="nav-item active">
               <a id="btn-sistema" class="nav-link" v-on:click="ingresar" href="# "
                 ><b>Sistema</b> <span class="sr-only">(current)</span></a
+              >|
+
+              <a id="btn-sistema" class="nav-link" v-on:click="" href="/"
+                ><b>catalogo</b> <span class="sr-only">(current)</span></a
+              >|
+
+              <a id="btn-sistema" class="nav-link" v-on:click="" href="/"
+                ><b>Inicio</b> <span class="sr-only">(current)</span></a
               >
             </li>
           </ul>
@@ -76,6 +84,8 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+
+      <div class="body">
       <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
         <div class="col-md-6 px-0">
           <div>
@@ -108,6 +118,9 @@
           </p>
         </div>
       </div>
+      
+      </div>
+
       <div>
         <home />
       </div>
@@ -319,12 +332,11 @@ export default {
   width: 95%;
 }
 
-body{
-  width: 1200px;
-}
 
 .contenedor-main {
-	  background-image: linear-gradient(to right, #016AAB 0%, #005085 100%);
+
+  background-image: radial-gradient(circle at 45.98% 27.21%, #2cd7cd 0, #24c2c2 12.5%, #27a9b0 25%, #2d8d98 37.5%, #316f7a 50%, #30525b 62.5%, #2b3a40 75%, #242728 87.5%, #1c1815 100%);
+
 	box-shadow: 0px 0px 20px black;
 	z-index: 12;
 	position: relative;
@@ -342,4 +354,5 @@ body{
     border-top: 2px solid blue;
     box-shadow: 0 0 5px black;
 }
+
 </style>

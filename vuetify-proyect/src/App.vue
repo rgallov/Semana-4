@@ -5,10 +5,8 @@
         <a class="navbar-brand" href="# ">
           <img
             src="./assets/images/canequita2.png"
-            width="30"
-            height="30"
-            class="d-inline-block align-top"
-            alt=" "
+            class="d-inline-block align-top nav_icon"
+            alt="Canequitas"
             loading="lazy "
           />
           <b>  CANEQUITAS</b>
@@ -16,6 +14,17 @@
         </a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
           <ul class="navbar-nav">
+            <li class="nav-item">
+                          <a class="nav-link" href="#who">Qué hacemos</a>
+                          <!-- <a href="#" class="main-menu__link">Servicios</a> -->
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#products">Productos</a>
+                          <!-- <a href="#" class="main-menu__link">Noticias</a> -->
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#cases">Casos</a>
+                      </li>
             <li class="nav-item active">
               <a id="btn-sistema" class="nav-link" v-on:click="ingresar" href="# "
                 ><b>Sistema</b> <span class="sr-only">(current)</span></a
@@ -76,17 +85,23 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
-        <div class="col-md-6 px-0">
-          <div>
-            <img
-              src="./assets/images/calidad.jpg"
-              alt="Contenedores"
-              class="imagen_calidad"
-            />
+      <section id="who">
+        <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="dark col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h2 class="bold">Qué hacemos</h2>
           </div>
         </div>
-        <div class="col-md-6 px-0">
+        <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
+          <div class="col-md-6 px-0">
+            <div>
+              <img
+                src="./assets/images/calidad.jpg"
+                alt="Contenedores"
+                class="imagen_calidad"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 px-0">
           <h3 class="display-5 font-italic">
             CONTENEDORES DE BASURA. APRENDA A UTILIZARLOS CORRECTAMENTE
           </h3>
@@ -107,9 +122,10 @@
             >
           </p>
         </div>
-      </div>
+        </div>        
+      </section>
       <div>
-        <home />
+        <home/>
       </div>
       <footer class="bg-light text-white">
         <!-- Footer Text -->
@@ -317,6 +333,11 @@ export default {
 
 .imagen_calidad {
   width: 95%;
+}
+
+.nav_icon{
+  width:30px;
+  height:30px;
 }
 
 body{

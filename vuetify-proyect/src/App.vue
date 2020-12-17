@@ -25,7 +25,7 @@
                   <a class="nav-link" href="#cases">Casos</a>
               </li>
               <li class="nav-item active">
-                <a id="btn btn-outline-dark btn-sistema" class="nav-link" v-on:click="ingresar" href="# "
+                <a class="btn btn-outline-success" v-on:click="ingresar" href="# "
                   ><b>Sistema</b> <span class="sr-only">(current)</span></a
                 >
               </li>
@@ -356,15 +356,4 @@ body{
   margin: auto;
 }
 
-#btn-sistema{
-	  background-color: #black;
-    border-radius: 0px 0px 4px 4px;
-    display: inline-block;
-    padding: 6px 11px;
-    color: #337ab7;
-    font-weight: 700;
-    float: right;
-    border-top: 2px solid blue;
-    box-shadow: 0 0 5px black;
-}
 </style>

@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="contenedor-main">
     <div v-if="estado">
-      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-secondary mt-2 mb-2">
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark p-4 mt-2 mb-2">
         <a class="navbar-brand" href="# ">
           <img
-            src="./assets/images/canequita.png"
+            src="./assets/images/canequita2.png"
             width="30"
             height="30"
             class="d-inline-block align-top"
@@ -12,11 +12,12 @@
             loading="lazy "
           />
           <b>  CANEQUITAS</b>
+
         </a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" v-on:click="ingresar" href="# "
+              <a id="btn-sistema" class="nav-link" v-on:click="ingresar" href="# "
                 ><b>Sistema</b> <span class="sr-only">(current)</span></a
               >
             </li>
@@ -42,9 +43,9 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./assets/images/banner2.jpg" alt="Banner 2" class="imagen" />
+            <img src="./assets/images/camareciclaje.jpg" alt="Banner 2" class="imagen" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
+              <h5>Creativas camas con viejos neumaticos</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
@@ -316,5 +317,29 @@ export default {
 
 .imagen_calidad {
   width: 95%;
+}
+
+body{
+  width: 1200px;
+}
+
+.contenedor-main {
+	  background-image: linear-gradient(to right, #016AAB 0%, #005085 100%);
+	box-shadow: 0px 0px 20px black;
+	z-index: 12;
+	position: relative;
+	border-radius: 10;
+}
+
+#btn-sistema{
+	background-color: #black;
+    border-radius: 0px 0px 4px 4px;
+    display: inline-block;
+    padding: 6px 11px;
+    color: #337ab7;
+    font-weight: 700;
+    float: right;
+    border-top: 2px solid blue;
+    box-shadow: 0 0 5px black;
 }
 </style>

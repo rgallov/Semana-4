@@ -1,7 +1,7 @@
 <template>
   <div class="contenedor-main">
     <div v-if="estado">
-      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark p-4 mt-2 mb-2">
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dark p-4 mt-3 mb-3">
         <a class="navbar-brand" href="# ">
           <img
             src="./assets/images/canequita2.png"
@@ -129,7 +129,7 @@
         <div class="content text-dark">
           <!-- Grid row -->
           <div class="footer-container row">
-            <div class="text-center col-12 col-md-4 col-lg-4 col-xl-3 mt-4">
+            <div id="SAS" class="text-center col-12 col-md-4 col-lg-4 col-xl-3 mt-4">
               <i class="fas fa-recycle"></i>
               <b>  CANEQUITAS SAS</b>
             </div>
@@ -169,7 +169,7 @@
                 ></a>
               </div>              
           </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xl-3 pl-5 mt-3">
+            <div id="ubicacion" class="col-12 col-md-4 col-lg-4 col-xl-3 pl-5 mt-3">
                <h5>Ubiquenos en :</h5>
               <ul class="list-inline">
                 <li class="list-inline-item">Bogotá, D.C.</li>
@@ -187,7 +187,7 @@
                     <span><b>Email Contacto: </b> contacto@recycle.com </span>
         </div>
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-1 bg-dark">
+        <div class="footer-copyright text-center py-1">
           <span>© 2020 Copyright</span> -
           <span class="footer__span">
             <i class="fab fa-github"></i>
@@ -273,7 +273,7 @@
           <v-layout justify-center>
             <v-flex text-xs-center>
               <v-card flat tile color="primary" class="white--text">
-                <v-card-text class="white--text pt-0">
+                <v-card-text id="copyr" class="white--text pt-0">
                   Proyecto final &copy;2020
                 </v-card-text>
               </v-card>
@@ -353,6 +353,22 @@ export default {
     float: right;
     border-top: 2px solid blue;
     box-shadow: 0 0 5px black;
+}
+
+.footer-container{
+  background-color: #03293e;
+}
+
+#SAS, #ubicacion{
+  color: white;
+}
+
+.navbar{
+  background-color:  #03293e;
+}
+
+.footer-copyright{
+  background-color:  #03293e;
 }
 
 </style>

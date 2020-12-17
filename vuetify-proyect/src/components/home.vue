@@ -83,4 +83,8 @@ export default {
 .imagen_producto{
     width: 80%;
 }
+
+.bold{
+  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
 </style>

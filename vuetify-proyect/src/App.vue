@@ -88,9 +88,7 @@
       <main>
         <section id="who">
           <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="dark col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <h2 class="bold">Qué hacemos</h2>
-            </div>
+              <h2 class="bold">Qué hacemos</h2>            
           </div>
           <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
             <div class="col-md-6 px-0">
@@ -338,8 +336,8 @@ export default {
 }
 
 .nav_icon{
-  width:30px;
-  height:30px;
+  width:35px;
+  height:35px;
 }
 
 body{

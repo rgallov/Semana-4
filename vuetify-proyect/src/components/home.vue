@@ -2,12 +2,10 @@
   <div>
     <section id="products">
       <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <div class="dark col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <h2 class="bold">Productos</h2>
-        </div>
+        <h2 class="bold">Productos</h2>
       </div>
       <div class="container-fluid">
-        <div class="row mt-md-5 mt-sm-5 mt-xs-5">
+        <div class="row">
           <div
             v-for="(art, indice) of datos"
             :key="art.id"
@@ -47,18 +45,16 @@
       data-section-name="casos-exito"
     >
       <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <div class="dark col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <h2 class="bold">Casos de Exito</h2>
-        </div>
+        <h2 class="bold">Casos de Exito</h2>
       </div>
 
       <div class="container-fluid">
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center">
           <CasoCard
             v-for="miembro in casos"
             :key="miembro.codigo"
             :member="miembro"
-            class="col mt-5"
+            class="col"
           ></CasoCard>
         </div>
       </div>

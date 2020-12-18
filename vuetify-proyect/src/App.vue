@@ -10,19 +10,18 @@
               alt="Canequitas"
               loading="lazy "
             />
-            <b>  CANEQUITAS</b>
-
+            <b> CANEQUITAS</b>
           </a>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
             <ul class="navbar-nav">
               <li class="nav-item">
-                  <a class="nav-link" href="#who">Qué hacemos</a>
+                <a class="nav-link" href="#who">Qué hacemos</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#products">Productos</a>
+                <a class="nav-link" href="#products">Productos</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#cases">Casos</a>
+                <a class="nav-link" href="#cases">Casos</a>
               </li>
               <li class="nav-item active">
                 <a class="btn btn-outline-success" v-on:click="ingresar" href="# "
@@ -30,7 +29,6 @@
                 >
               </li>
             </ul>
-
           </div>
         </nav>
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -52,7 +50,11 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./assets/images/camareciclaje.jpg" alt="Banner 2" class="imagen" />
+              <img
+                src="./assets/images/camareciclaje.jpg"
+                alt="Banner 2"
+                class="imagen"
+              />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Creativas camas con viejos neumaticos</h5>
                 <p>Contenedores para distintos proyectos sociales.</p>
@@ -85,14 +87,15 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-
       </header>
       <main>
         <section id="who">
           <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <h2 class="bold">Qué hacemos</h2>            
+            <h2 class="bold">Qué hacemos</h2>
           </div>
-          <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
+          <div
+            class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2"
+          >
             <div class="col-md-6 px-0">
               <div>
                 <img
@@ -103,30 +106,30 @@
               </div>
             </div>
             <div class="col-md-6 px-0">
-            <h3 class="display-5 font-italic">
-              CONTENEDORES DE BASURA. APRENDA A UTILIZARLOS CORRECTAMENTE
-            </h3>
-            <p class="lead my-3">
-              Es común que en la actualidad a las personas se les dificulte reciclar, muchas
-              veces este problema nace de la imposibilidad por comprender los usos de los
-              colores que se utiliza para identificar los contenedores de basura, tener una
-              plena identificación de las canecas de reciclaje nos ayuda a facilitar este
-              proceso; además es importante que el reciclaje se convierta en un hábito
-              diario de la mayoría de las personas.
-            </p>
-            <p class="lead mb-0">
-              <a
-                href="https://canecasdereciclaje.com/noticias/canecas-de-reciclaje-blog/contenedores-de-basura-aprenda-a-utilizarlos-correctamente/"
-                class="text-primary font-weight-bold"
-                target="_blank"
-                >Leer más...</a
-              >
-            </p>
+              <h3 class="display-5 font-italic">
+                CONTENEDORES DE BASURA. APRENDA A UTILIZARLOS CORRECTAMENTE
+              </h3>
+              <p class="lead my-3">
+                Es común que en la actualidad a las personas se les dificulte reciclar,
+                muchas veces este problema nace de la imposibilidad por comprender los
+                usos de los colores que se utiliza para identificar los contenedores de
+                basura, tener una plena identificación de las canecas de reciclaje nos
+                ayuda a facilitar este proceso; además es importante que el reciclaje se
+                convierta en un hábito diario de la mayoría de las personas.
+              </p>
+              <p class="lead mb-0">
+                <a
+                  href="https://canecasdereciclaje.com/noticias/canecas-de-reciclaje-blog/contenedores-de-basura-aprenda-a-utilizarlos-correctamente/"
+                  class="text-primary font-weight-bold"
+                  target="_blank"
+                  >Leer más...</a
+                >
+              </p>
+            </div>
           </div>
-          </div>        
         </section>
         <div>
-          <home/>
+          <home />
         </div>
       </main>
       <footer class="bg-light text-white">
@@ -136,16 +139,13 @@
           <div class="footer-container row">
             <div id="SAS" class="text-center col-12 col-md-4 col-lg-4 col-xl-3 mt-4">
               <i class="fas fa-recycle"></i>
-              <b>  CANEQUITAS SAS</b>
+              <b> CANEQUITAS SAS</b>
             </div>
             <div class="text-center col-12 col-md-4 col-lg-4 col-xl-3">
               <div
                 class="py-4 md:py-0 flex justify-center md:justify-start text-primary-2"
               >
-                <a
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  class=""
+                <a href="https://www.linkedin.com/" target="_blank" class=""
                   ><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i
                 ></a>
                 <a
@@ -172,24 +172,24 @@
                   class="hover-opacity block social-icon ml-4"
                   ><i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i
                 ></a>
-              </div>              
-          </div>
+              </div>
+            </div>
             <div id="ubicacion" class="col-12 col-md-4 col-lg-4 col-xl-3 pl-5 mt-3">
-               <h5>Ubiquenos en :</h5>
+              <h5>Ubiquenos en :</h5>
               <ul class="list-inline">
                 <li class="list-inline-item">Bogotá, D.C.</li>
                 <li class="list-inline-item">Cali</li>
                 <li class="list-inline-item">Barranquilla</li>
               </ul>
             </div>
-            </div>
+          </div>
         </div>
         <div class="footer-copyright text-center py-1 bg-secondary">
           <span><b>Dirección:</b> Carrera 1 # 1 - 11 </span>
-                    <span><b>Teléfono: (</b>+57)&nbsp;(1) 333 3333 </span>
-                    <span><b>Celular: (</b>+57)&nbsp;(1) 313 333 333 </span>
-                    <span><b>Email Ventas: </b> ventas@recycle.com </span>
-                    <span><b>Email Contacto: </b> contacto@recycle.com </span>
+          <span><b>Teléfono: (</b>+57)&nbsp;(1) 333 3333 </span>
+          <span><b>Celular: (</b>+57)&nbsp;(1) 313 333 333 </span>
+          <span><b>Email Ventas: </b> ventas@recycle.com </span>
+          <span><b>Email Contacto: </b> contacto@recycle.com </span>
         </div>
         <!-- Copyright -->
         <div class="footer-copyright text-center py-1">
@@ -197,7 +197,8 @@
           <span class="footer__span">
             <i class="fab fa-github"></i>
             <a class="footer-ul__link" href="https://github.com/rgallov/Semana-4">
-              GitHub</a>
+              GitHub</a
+            >
           </span>
         </div>
         <!-- Copyright -->
@@ -337,52 +338,63 @@ export default {
   width: 95%;
 }
 
-.nav_icon{
-  width:35px;
-  height:35px;
+.nav_icon {
+  width: 35px;
+  height: 35px;
 }
 
-body{
+body {
   width: 1200px;
 }
 
 .contenedor-main {
-	background-image: radial-gradient(circle at 45.98% 27.21%, #2cd7cd 0, #24c2c2 12.5%, #27a9b0 25%, #2d8d98 37.5%, #316f7a 50%, #30525b 62.5%, #2b3a40 75%, #242728 87.5%, #1c1815 100%);
+  background-image: radial-gradient(
+    circle at 45.98% 27.21%,
+    #2cd7cd 0,
+    #24c2c2 12.5%,
+    #27a9b0 25%,
+    #2d8d98 37.5%,
+    #316f7a 50%,
+    #30525b 62.5%,
+    #2b3a40 75%,
+    #242728 87.5%,
+    #1c1815 100%
+  );
 
-	box-shadow: 0px 0px 20px black;
-	z-index: 12;
-	position: relative;
+  box-shadow: 0px 0px 20px black;
+  z-index: 12;
+  position: relative;
   border-radius: 10;
   width: 1200px;
   margin: auto;
 }
 
-#btn-sistema{
-	background-color: #black;
-    border-radius: 0px 0px 4px 4px;
-    display: inline-block;
-    padding: 6px 11px;
-    color: #337ab7;
-    font-weight: 700;
-    float: right;
-    border-top: 2px solid blue;
-    box-shadow: 0 0 5px black;
+#btn-sistema {
+  background-color: black;
+  border-radius: 0px 0px 4px 4px;
+  display: inline-block;
+  padding: 6px 11px;
+  color: #337ab7;
+  font-weight: 700;
+  float: right;
+  border-top: 2px solid blue;
+  box-shadow: 0 0 5px black;
 }
 
-.footer-container{
+.footer-container {
   background-color: #03293e;
 }
 
-#SAS, #ubicacion{
+#SAS,
+#ubicacion {
   color: white;
 }
 
-.navbar{
-  background-color:  #03293e;
+.navbar {
+  background-color: #03293e;
 }
 
-.footer-copyright{
-  background-color:  #03293e;
+.footer-copyright {
+  background-color: #03293e;
 }
-
 </style>

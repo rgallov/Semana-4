@@ -273,7 +273,8 @@
                         'num_documento':this.num_documento,
                         'telefono':this.telefono,
                         'direccion':this.direccion,
-                        'email':this.email
+                        'email':this.email,
+                        'password':this.password
                     },configuracion)
                     .then(function(response){
                         me.limpiar();
@@ -293,7 +294,8 @@
                         'num_documento':this.num_documento,
                         'telefono':this.telefono,
                         'direccion':this.direccion,
-                        'email':this.email
+                        'email':this.email,
+                        'password':this.password
                     },configuracion)
                     .then(function(response){
                         me.limpiar();

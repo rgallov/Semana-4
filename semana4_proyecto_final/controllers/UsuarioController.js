@@ -6,15 +6,16 @@ const token = require('../services/token');
 module.exports = {
     add: async(req, res, next) => {        
         try {
-            User.findOne({ email: req.body.email }).then(async user => {
-                if (user) {
+            console.log(req.body.email);
+            const reg = await models.Usuario.findOne({where:{ email: req.body.email }});
+                if (reg) {
                     return res.status(400).json({ email: "Email already exists" });
                 } else {
-                    req.body.password = bcrypt.hashSync(req.body.password, 10);
-                    const user = await models.Usuario.create(req.body);
+                    req.body.password = await bcrypt.hash(req.body.password, 10);
+                    const reg = await models.Usuario.create(req.body);
                     return res.status(200).json(reg);
                 }
-            })
+            
         } catch (e) {
             res.status(500).send({
                 message: 'Ocurrió un error'
@@ -24,7 +25,7 @@ module.exports = {
         },
     query: async(req, res, next) => {
         try {
-            const reg = await models.Usuario.findOne({ id: req.query.id });
+            const reg = await models.Usuario.findOne({ where:{ id: req.query.id }});
             if (!reg) {
                 res.status(404).send({
                     message: 'El registro no existe'
@@ -102,12 +103,10 @@ module.exports = {
     },
     login: async(req, res, next) => {
         try {
-            console.log(req.body.email)
             let user = await models.Usuario.findOne({ where: { email: req.body.email } });
             if (user) {
                 let match = await bcrypt.compare(req.body.password, user.password);
                 if (match) {
-                    console.log(user.rol);
                     let tokenReturn = await token.encode(user.id, user.rol);
                     res.status(200).json({ user, tokenReturn });
                 } else {
@@ -126,5 +125,23 @@ module.exports = {
             });
             next(e);
         }
-    }
+    },
+    queryUserAuth: async(req, res, next) => {
+        const response = await token.decode(req.headers.token);
+        try {
+            const reg = await models.Usuario.findOne({ id: response.id });
+            if (!reg) {
+                res.status(404).send({
+                    message: 'El registro no existe'
+                });
+            } else {
+                res.status(200).json(reg);
+            }
+        } catch (e) {
+            res.status(500).send({
+                message: 'Ocurrió un error'
+            });
+            next(e);
+        }
+    },
 }

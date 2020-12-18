@@ -50,13 +50,29 @@ module.exports = {
             next(e);
         }
     },
-    list: async(req, res, next) => {
+    listAdmin: async(req, res, next) => {
         try {
             const reg = await models.Articulo.findAll({
                 include: [{
                     model: Categoria,
                     as: 'categoria'
                 }],
+            });
+            res.status(200).json(reg);
+        } catch (e) {
+            res.status(500).send({
+                message: 'Ocurrió un error'
+            });
+            next(e);
+        }
+    },
+    list: async(req, res, next) => {
+        try {
+            const reg = await models.Articulo.findAll({
+                include: [{
+                    model: Categoria,
+                    as: 'categoria'
+                }], where: {estado: 1}
             });
             res.status(200).json(reg);
         } catch (e) {

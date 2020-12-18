@@ -1,129 +1,134 @@
 <template>
   <div class="contenedor-main">
     <div v-if="estado">
-      <nav class="navbar navbar-expand-lg sticky-top navbar-dark p-4 mt-3 mb-3">
-        <a class="navbar-brand" href="# ">
-          <img
-            src="./assets/images/canequita2.png"
-            width="30"
-            height="30"
-            class="d-inline-block align-top"
-            alt=" "
-            loading="lazy "
-          />
-          <b>  CANEQUITAS</b>
-
-        </a>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a id="btn-sistema" class="nav-link" v-on:click="ingresar" href="# "
-                ><b>Sistema</b> <span class="sr-only">(current)</span></a
-              >|
-
-              <a id="btn-sistema" class="nav-link" v-on:click="" href="/"
-                ><b>catalogo</b> <span class="sr-only">(current)</span></a
-              >|
-
-              <a id="btn-sistema" class="nav-link" v-on:click="" href="/"
-                ><b>Inicio</b> <span class="sr-only">(current)</span></a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleCaptions"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./assets/images/banner1.jpg" alt="Banner 1" class="imagen" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/images/camareciclaje.jpg" alt="Banner 2" class="imagen" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Creativas camas con viejos neumaticos</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/images/banner3.jpg" alt="Banner 3" class="imagen" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
-          </div>
-        </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleCaptions"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleCaptions"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-      <div class="body">
-      <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
-        <div class="col-md-6 px-0">
-          <div>
+      <header>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark p-4 mt-3 mb-3">
+          <a class="navbar-brand" href="# ">
             <img
-              src="./assets/images/calidad.jpg"
-              alt="Contenedores"
-              class="imagen_calidad"
+              src="./assets/images/canequita2.png"
+              class="d-inline-block align-top nav_icon"
+              alt="Canequitas"
+              loading="lazy "
             />
-          </div>
-        </div>
-        <div class="col-md-6 px-0">
-          <h3 class="display-5 font-italic">
-            CONTENEDORES DE BASURA. APRENDA A UTILIZARLOS CORRECTAMENTE
-          </h3>
-          <p class="lead my-3">
-            Es común que en la actualidad a las personas se les dificulte reciclar, muchas
-            veces este problema nace de la imposibilidad por comprender los usos de los
-            colores que se utiliza para identificar los contenedores de basura, tener una
-            plena identificación de las canecas de reciclaje nos ayuda a facilitar este
-            proceso; además es importante que el reciclaje se convierta en un hábito
-            diario de la mayoría de las personas.
-          </p>
-          <p class="lead mb-0">
-            <a
-              href="https://canecasdereciclaje.com/noticias/canecas-de-reciclaje-blog/contenedores-de-basura-aprenda-a-utilizarlos-correctamente/"
-              class="text-primary font-weight-bold"
-              target="_blank"
-              >Leer más...</a
-            >
-          </p>
-        </div>
-      </div>
-      
-      </div>
+            <b>  CANEQUITAS</b>
 
-      <div>
-        <home />
-      </div>
+          </a>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="#who">Qué hacemos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#products">Productos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#cases">Casos</a>
+              </li>
+              <li class="nav-item active">
+                <a class="btn btn-outline-success" v-on:click="ingresar" href="# "
+                  ><b>Sistema</b> <span class="sr-only">(current)</span></a
+                >
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleCaptions"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/images/banner1.jpg" alt="Banner 1" class="imagen" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Contenedores</h5>
+                <p>Distintas variedades para el control del reciclaje.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/camareciclaje.jpg" alt="Banner 2" class="imagen" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Creativas camas con viejos neumaticos</h5>
+                <p>Contenedores para distintos proyectos sociales.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/images/banner3.jpg" alt="Banner 3" class="imagen" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Contenedores para comercio</h5>
+                <p>Contenedores industriales de reciclaje.</p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </header>
+      <main>
+        <section id="who">
+          <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <h2 class="bold">Qué hacemos</h2>            
+          </div>
+          <div class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2">
+            <div class="col-md-6 px-0">
+              <div>
+                <img
+                  src="./assets/images/calidad.jpg"
+                  alt="Contenedores"
+                  class="imagen_calidad"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 px-0">
+            <h3 class="display-5 font-italic">
+              CONTENEDORES DE BASURA. APRENDA A UTILIZARLOS CORRECTAMENTE
+            </h3>
+            <p class="lead my-3">
+              Es común que en la actualidad a las personas se les dificulte reciclar, muchas
+              veces este problema nace de la imposibilidad por comprender los usos de los
+              colores que se utiliza para identificar los contenedores de basura, tener una
+              plena identificación de las canecas de reciclaje nos ayuda a facilitar este
+              proceso; además es importante que el reciclaje se convierta en un hábito
+              diario de la mayoría de las personas.
+            </p>
+            <p class="lead mb-0">
+              <a
+                href="https://canecasdereciclaje.com/noticias/canecas-de-reciclaje-blog/contenedores-de-basura-aprenda-a-utilizarlos-correctamente/"
+                class="text-primary font-weight-bold"
+                target="_blank"
+                >Leer más...</a
+              >
+            </p>
+          </div>
+          </div>        
+        </section>
+        <div>
+          <home/>
+        </div>
+      </main>
       <footer class="bg-light text-white">
         <!-- Footer Text -->
         <div class="content text-dark">
@@ -332,15 +337,24 @@ export default {
   width: 95%;
 }
 
+.nav_icon{
+  width:35px;
+  height:35px;
+}
+
+body{
+  width: 1200px;
+}
 
 .contenedor-main {
-
-  background-image: radial-gradient(circle at 45.98% 27.21%, #2cd7cd 0, #24c2c2 12.5%, #27a9b0 25%, #2d8d98 37.5%, #316f7a 50%, #30525b 62.5%, #2b3a40 75%, #242728 87.5%, #1c1815 100%);
+	background-image: radial-gradient(circle at 45.98% 27.21%, #2cd7cd 0, #24c2c2 12.5%, #27a9b0 25%, #2d8d98 37.5%, #316f7a 50%, #30525b 62.5%, #2b3a40 75%, #242728 87.5%, #1c1815 100%);
 
 	box-shadow: 0px 0px 20px black;
 	z-index: 12;
 	position: relative;
-	border-radius: 10;
+  border-radius: 10;
+  width: 1200px;
+  margin: auto;
 }
 
 #btn-sistema{

@@ -188,7 +188,7 @@
                 let me=this;
                 let header={"Token" : this.$store.state.token};
                 let configuracion= {headers : header};            
-                axios.get('articulo/list',configuracion).then(function (response){
+                axios.get('articulo/listAdmin',configuracion).then(function (response){
                     me.articulos=response.data;
                 }).catch(function(error){
                     console.log(error);

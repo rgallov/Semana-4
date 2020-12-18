@@ -7,14 +7,15 @@ const auth = require('../middlewares/auth');
 
 const router = routerx();
 
-router.post('/add', auth.verifyUsuario, usuarioController.add);
+router.post('/add', auth.verifyAdministrador, usuarioController.add);
 // router.post('/add', usuarioController.add);
-router.get('/query', auth.verifyUsuario, usuarioController.query);
-router.get('/list', auth.verifyUsuario, usuarioController.list);
-router.put('/update', auth.verifyUsuario, usuarioController.update);
-router.delete('/remove', auth.verifyUsuario, usuarioController.remove);
-router.put('/activate', auth.verifyUsuario, usuarioController.activate);
-router.put('/deactivate', auth.verifyUsuario, usuarioController.deactivate);
+router.get('/query', auth.verifyAdministrador, usuarioController.query);
+router.get('/queryUserAuth', auth.verifyAdministrador, usuarioController.queryUserAuth);
+router.get('/list', auth.verifyAdministrador, usuarioController.list);
+router.put('/update', auth.verifyAdministrador, usuarioController.update);
+router.delete('/remove', auth.verifyAdministrador, usuarioController.remove);
+router.put('/activate', auth.verifyAdministrador, usuarioController.activate);
+router.put('/deactivate', auth.verifyAdministrador, usuarioController.deactivate);
 router.post('/login', usuarioController.login);
 
 module.exports = router;

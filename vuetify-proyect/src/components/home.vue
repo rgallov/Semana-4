@@ -49,7 +49,7 @@
       </div>
 
       <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="d-flex flex-row flex-nowrap overflow-auto">
           <CasoCard
             v-for="miembro in casos"
             :key="miembro.codigo"
@@ -57,7 +57,7 @@
             class="col mt-1"
           ></CasoCard>
         </div>
-      </div>
+      </div>      
     </section>
   </div>
 </template>
@@ -80,6 +80,7 @@ export default {
     axios.get("articulo/list").then((response) => (this.datos = response.data));
   },
 };
+
 </script>
 <style scoped>
 .imagen_producto{
@@ -89,4 +90,5 @@ export default {
 .bold{
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }
+
 </style>

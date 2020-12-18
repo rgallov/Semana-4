@@ -46,22 +46,22 @@
             <div class="carousel-item active">
               <img src="./assets/images/banner1.jpg" alt="Banner 1" class="imagen" />
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h5>Contenedores</h5>
+                <p>Distintas variedades para el control del reciclaje.</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./assets/images/camareciclaje.jpg" alt="Banner 2" class="imagen" />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Creativas camas con viejos neumaticos</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Contenedores para distintos proyectos sociales.</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./assets/images/banner3.jpg" alt="Banner 3" class="imagen" />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <h5>Contenedores para comercio</h5>
+                <p>Contenedores industriales de reciclaje.</p>
               </div>
             </div>
           </div>

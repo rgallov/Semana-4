@@ -380,7 +380,7 @@ body {
   padding: 6px 11px;
   color: #337ab7;
   font-weight: 700;
-  float: right;
+  /* float: right; */
   border-top: 2px solid blue;
   box-shadow: 0 0 5px black;
 }

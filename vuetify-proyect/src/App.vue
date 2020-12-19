@@ -1,6 +1,6 @@
 <template>
-  <div class="contenedor-main">
-    <div v-if="estado">
+  <div class="">
+    <div v-if="estado" class="contenedor-main">
       <header>
         <nav class="navbar navbar-expand-lg sticky-top navbar-dark p-4 mt-3 mb-3">
           <a class="navbar-brand" href="# ">
@@ -22,6 +22,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#cases">Casos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contacto</a>
               </li>
               <li class="nav-item active">
                 <a class="btn btn-outline-success" v-on:click="ingresar" href="# "
@@ -132,7 +135,7 @@
           <home />
         </div>
       </main>
-      <footer class="bg-light text-white">
+      <footer class="bg-light text-white" id="footer">
         <!-- Footer Text -->
         <div class="content text-dark">
           <!-- Grid row -->
@@ -251,11 +254,10 @@
             </template>
           </v-list>
         </v-navigation-drawer>
-
         <v-app-bar
           :clipped-left="$vuetify.breakpoint.lgAndUp"
           app
-          color="silver darken-3"
+          color="green darken-1"
           dark
         >
           <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
@@ -263,10 +265,12 @@
             <span class="hidden-sm-and-down">Sistema</span>
           </v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn @click="salir()" icon v-if="logueado">
+          <v-btn @click="salir()" icon class="mr-5" v-if="logueado">
             <v-icon>logout</v-icon> Salir
           </v-btn>
-          <v-btn :to="{ name: 'login' }" icon v-else> <v-icon>apps</v-icon> Login </v-btn>
+          <v-btn :to="{ name: 'login' }" icon class="mr-5" v-else>
+            <v-icon>apps</v-icon> Login
+          </v-btn>
         </v-app-bar>
         <v-content>
           <v-container fluid fill-height>
@@ -278,9 +282,9 @@
         <v-footer height="auto">
           <v-layout justify-center>
             <v-flex text-xs-center>
-              <v-card flat tile color="primary" class="white--text">
-                <v-card-text id="copyr" class="white--text pt-0">
-                  Proyecto final &copy;2020
+              <v-card flat tile color="green darken-1" class="white--text">
+                <v-card-text id="copyr" class="white--text pt-0 text-center">
+                  Proyecto final &copy; 2020
                 </v-card-text>
               </v-card>
             </v-flex>

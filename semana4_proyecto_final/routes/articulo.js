@@ -7,7 +7,8 @@ const auth = require('../middlewares/auth');
 
 const router = routerx();
 
-router.post('/add', auth.verifyUsuario, articuloController.add);
+// router.post('/add', auth.verifyUsuario, articuloController.add);
+router.post('/add', articuloController.add);
 router.get('/query', auth.verifyUsuario, articuloController.query);
 router.get('/queryCodigo', auth.verifyUsuario, articuloController.queryCodigo);
 router.get('/list', articuloController.list);

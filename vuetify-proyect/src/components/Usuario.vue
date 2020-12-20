@@ -16,7 +16,7 @@
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" max-width="500px">
           <template v-slot:activator="{ on }">
-            <v-btn color="primary" dark class="mb-2" v-on="on">Nuevo</v-btn>
+            <v-btn color="teal darken-4" dark class="mb-2" v-on="on">Nuevo</v-btn>
           </template>
           <v-card>
             <v-card-title>
@@ -32,7 +32,8 @@
                     <v-select v-model="rol" :items="tipoRoles" label="Rol"> </v-select>
                   </v-flex>
                   <v-flex xs12 sm6 md6>
-                    <v-text-field v-model="email" label="Email"> </v-text-field>
+                    <v-text-field v-model="email" label="Email" :rules="emailRules">
+                    </v-text-field>
                   </v-flex>
                   <v-flex xs12 sm6 md6>
                     <v-select
@@ -69,8 +70,8 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" @click="close">Cancelar</v-btn>
-              <v-btn color="blue darken-1" @click="guardar">Guardar</v-btn>
+              <v-btn color="teal darken-1" @click="close">Cancelar</v-btn>
+              <v-btn color="teal darken-1" @click="guardar">Guardar</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -88,13 +89,13 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn @click="activarDesactivarCerrar()" color="green darken-1">
+              <v-btn @click="activarDesactivarCerrar()" color="teal lighten-2">
                 Cancelar
               </v-btn>
-              <v-btn v-if="adAccion == 1" @click="activar()" color="orange darken-4">
+              <v-btn v-if="adAccion == 1" @click="activar()" color="teal darken-1">
                 Activar
               </v-btn>
-              <v-btn v-if="adAccion == 2" @click="desactivar()" color="orange darken-4">
+              <v-btn v-if="adAccion == 2" @click="desactivar()" color="teal darken-1">
                 Desactivar
               </v-btn>
             </v-card-actions>
@@ -108,12 +109,21 @@
         class="elevation-1"
       >
         <template v-slot:[`item.opciones`]="{ item }">
-          <v-icon small class="mr-2" @click="editItem(item)"> edit </v-icon>
-          <v-icon v-if="item.estado" small @click="activarDesactivarMostrar(2, item)">
-            block
+          <v-icon small class="mr-2" @click="editItem(item)" color="teal darken-4">
+            fas fa-edit
+          </v-icon>
+          <v-icon
+            v-if="item.estado"
+            small
+            @click="activarDesactivarMostrar(2, item)"
+            color="green"
+          >
+            fas fa-toggle-on
           </v-icon>
 
-          <v-icon v-else small @click="activarDesactivarMostrar(1, item)"> check </v-icon>
+          <v-icon v-else small @click="activarDesactivarMostrar(1, item)" color="grey">
+            fas fa-toggle-off</v-icon
+          >
         </template>
         <template v-slot:[`item.estado`]="{ item }">
           <div v-if="item.estado">
@@ -166,6 +176,11 @@ export default {
       adAccion: 0,
       adNombre: "",
       adId: "",
+      emailRules: [
+        (v) =>
+          /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
+          "Debe ingresar in email válido",
+      ],
     };
   },
   computed: {
@@ -197,35 +212,6 @@ export default {
           console.log(error);
         });
     },
-    // selectTipoDocumento() {
-    //   let me = this;
-    //   // let tipoDocumentoArray=[];
-    //   let tipoDocumentoArray = [
-    //     { nombre: "Cédula", id: "CC" },
-    //     { nombre: "Tarjeta", id: "TI" },
-    //   ];
-    //   let header = { Token: this.$store.state.token };
-    //   let configuracion = { headers: header };
-    //   // tipoDocumentoArray=response.data;
-    //   tipoDocumentoArray.map(function (x) {
-    //     me.tipoDocumentos.push({ text: x.nombre, value: x.id });
-    //   });
-    // },
-    // selectRol() {
-    //   let me = this;
-    //   // let tipoDocumentoArray=[];
-    //   let tipoDocumentoArray = [
-    //     { nombre: "Administrador", id: "Administrador" },
-    //     { nombre: "Vendedor", id: "Vendedor" },
-    //     { nombre: "Almacenero", id: "Almacenero" },
-    //   ];
-    //   let header = { Token: this.$store.state.token };
-    //   let configuracion = { headers: header };
-    //   // tipoDocumentoArray=response.data;
-    //   tipoDocumentoArray.map(function (x) {
-    //     me.tipoRoles.push({ text: x.nombre, value: x.id });
-    //   });
-    // },
     limpiar() {
       this.id = "";
       this.nombre = "";

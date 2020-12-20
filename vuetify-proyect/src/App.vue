@@ -214,20 +214,26 @@
             <template>
               <v-list-item @click="home">
                 <v-list-item-action>
-                  <v-icon>home</v-icon>
+                  <v-icon color="green darken-4">home</v-icon>
                 </v-list-item-action>
                 <v-list-item-title> Inicio </v-list-item-title>
               </v-list-item>
             </template>
             <template v-if="logueado">
-              <v-list-item :to="{ name: 'usuario' }">
-                <v-list-item-action>
-                  <v-icon>people</v-icon>
-                </v-list-item-action>
-                <v-list-item-content>
-                  <v-list-item-title> Usuarios </v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
+              <v-list-group>
+                <v-list-item slot="activator">
+                  <v-list-item-content>
+                    <v-list-item-title> Personas </v-list-item-title>
+                  </v-list-item-content> </v-list-item
+                ><v-list-item :to="{ name: 'usuario' }">
+                  <v-list-item-action>
+                    <v-icon color="blue">people</v-icon>
+                  </v-list-item-action>
+                  <v-list-item-content>
+                    <v-list-item-title> Usuarios </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-group>
               <v-list-group>
                 <v-list-item slot="activator">
                   <v-list-item-content>
@@ -236,7 +242,7 @@
                 </v-list-item>
                 <v-list-item :to="{ name: 'categoria' }">
                   <v-list-item-action>
-                    <v-icon>table_chart</v-icon>
+                    <v-icon color="orange">fas fa-layer-group</v-icon>
                   </v-list-item-action>
                   <v-list-item-content>
                     <v-list-item-title> Categorías </v-list-item-title>
@@ -244,7 +250,7 @@
                 </v-list-item>
                 <v-list-item :to="{ name: 'articulo' }">
                   <v-list-item-action>
-                    <v-icon>table_chart</v-icon>
+                    <v-icon color="green">delete</v-icon>
                   </v-list-item-action>
                   <v-list-item-content>
                     <v-list-item-title> Artículos </v-list-item-title>
@@ -273,7 +279,7 @@
           </v-btn>
         </v-app-bar>
         <v-content>
-          <v-container fluid fill-height>
+          <v-container fluid>
             <v-slide-y-transition mode="out-in">
               <router-view />
             </v-slide-y-transition>

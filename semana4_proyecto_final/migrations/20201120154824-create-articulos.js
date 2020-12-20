@@ -33,6 +33,15 @@ module.exports = {
                 allowNull: false,
                 defaultValue: 1,
             },
+            imagen: {
+                type: Sequelize.BLOB,
+                allowNull: true,
+            },
+            url: {
+                type: Sequelize.STRING,
+                allowNull: true,
+            },
+            
             categoriaId: {
                 type: Sequelize.INTEGER,
                 allowNull: false,

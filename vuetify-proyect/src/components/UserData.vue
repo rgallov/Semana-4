@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-2 b">
+  <div class="container mt-2 b text-center d-flex flex-column justify-content-center">
     <h1>Bienvenido</h1>
     <form class="text-md-right">
       <div class="d-flex row row_person pt-2 pb-2 justify-content-between">

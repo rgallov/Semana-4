@@ -12,6 +12,8 @@
             color="green lighten-4"
             label="Email"
             required
+            :rules="emailRules"
+            @keyup.enter="ingresar()"
           >
           </v-text-field>
           <v-text-field
@@ -20,6 +22,7 @@
             color="green lighten-4"
             label="Password"
             required
+            @keyup.enter="ingresar()"
           >
           </v-text-field>
           <v-alert dense outlined type="error" v-if="errorM">
@@ -27,12 +30,14 @@
           </v-alert>
         </v-card-text>
         <v-card-actions class="px-3 pb-3">
-          <v-flex text-xs-right>
-            <v-btn @click="ingresar()" outlined color="green lighten-2">Ingresar</v-btn>
+          <v-flex>
+            <v-btn @click.prevent="ingresar()" outlined color="green lighten-2"
+              >Ingresar</v-btn
+            >
           </v-flex>
-          <v-flex text-xs-left>
+          <!-- <v-flex text-xs-left>
             <v-btn @click="cancelar()" outlined color="green lighten-2">Cancelar</v-btn>
-          </v-flex>
+          </v-flex> -->
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -47,6 +52,11 @@ export default {
       email: "",
       password: "",
       errorM: null,
+      emailRules: [
+        (v) =>
+          /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
+          "Debe ingresar in email válido",
+      ],
     };
   },
 

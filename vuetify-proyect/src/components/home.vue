@@ -12,29 +12,7 @@
             class="col-lg-6 col-xs-12 border"
           >
             <div v-if="indice <= 3">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="p-3">
-                  <img src="https://simaro.global.ssl.fastly.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/P/a/Paso-N--16-Galn-2-Compartimiento-de-Basura-y-de-Reciclaje---Disponible-en-Varios-Colores_2.jpeg" class="imagen_producto"/>
-                </div>
-
-                <div class="p-2">
-                  <p>
-                    <h5>Producto:</h5>
-                  </p>
-                  <p>
-                    {{ art.nombre }}
-                  </p>
-                  <p>
-                    <h5>Descripción:</h5>
-                  </p>
-                  <p>
-                    {{ art.descripcion }}
-                  </p>
-                </div>              
-              </div>
-              <div class="d-flex container-fluid justify-content-end pb-2 mt-n2">
-                <button type="button" class="btn btn-outline-info">Info</button>
-              </div>
+                <articulo-data :articulo=art></articulo-data>
             </div>
           </div>
         </div>
@@ -66,9 +44,11 @@
 import axios from "axios";
 import CasoCard from "./CasoCard.vue";
 import jsonCasos from "../assets/files/casosExito.json";
+import ArticuloData from './ArticuloData.vue';
 export default {
   components: {
     CasoCard,
+    ArticuloData,
   },
   data() {
     return {
@@ -79,6 +59,7 @@ export default {
   mounted() {
     axios.get("articulo/list").then((response) => (this.datos = response.data));
   },
+  
 };
 
 </script>

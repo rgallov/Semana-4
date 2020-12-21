@@ -56,7 +56,7 @@
                     placeholder="Upload your document"
                     label="File input"
                     multiple
-                    prepend-icon="mdi-camera"
+                    prepend-icon="fas fa-camera"
                     @change="selectFile"
                   >
                     <template v-slot:selection="{ text }">
@@ -65,6 +65,7 @@
                       </v-chip>
                     </template>
                   </v-file-input>
+                  <v-img :src="imagen"></v-img>
                   <v-flex xs12 sm12 md12 v-show="valida">
                     <div
                       class="red--text"
@@ -217,12 +218,15 @@ export default {
     },
     selectFile(file) {
       const image = file[0];
-      const reader = new FileReader();
-      // reader.readAsDataURL(image);
-      reader.readAsArrayBuffer(image);
-      reader.onload = (image) => {
-        this.imagen = reader.result;
-      };
+      if (image != null) {
+        const reader = new FileReader();
+        reader.readAsDataURL(image);
+        reader.onload = (e) => {
+          this.imagen = e.target.result;
+        };
+      } else {
+        this.imagen = "";
+      }
     },
     selectCategoria() {
       let me = this;

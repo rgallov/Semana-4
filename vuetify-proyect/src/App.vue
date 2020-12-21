@@ -93,12 +93,12 @@
       </header>
       <main>
         <section id="who">
-          <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div
+            class="container col-sm-12 col-md-12 col-lg-12 col-xl-12 bg-title mt-1 mb-1"
+          >
             <h2 class="bold">Qué hacemos</h2>
           </div>
-          <div
-            class="jumbotron p-4 p-md-5 text-dark rounded bg-light d-flex flex-row mt-2"
-          >
+          <div class="jumbotron p-1 text-dark rounded bg-light d-flex flex-row">
             <div class="col-md-6 px-0">
               <div>
                 <img
@@ -139,7 +139,7 @@
         <!-- Footer Text -->
         <div class="content text-dark">
           <!-- Grid row -->
-          <div class="footer-container row">
+          <div class="footer-container d-flex">
             <div id="SAS" class="text-center col-12 col-md-4 col-lg-4 col-xl-3 mt-4">
               <i class="fas fa-recycle"></i>
               <b> CANEQUITAS SAS</b>
@@ -196,7 +196,8 @@
         </div>
         <!-- Copyright -->
         <div class="footer-copyright text-center py-1">
-          <span>© 2020 Copyright</span> -
+          <span>© 2020 Copyright</span>
+          <span class="mr-2 ml-2">-</span>
           <span class="footer__span">
             <i class="fab fa-github"></i>
             <a class="footer-ul__link" href="https://github.com/rgallov/Semana-4">
@@ -268,14 +269,14 @@
         >
           <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-            <span class="hidden-sm-and-down">Sistema</span>
+            <span class="hidden-sm-and-down">Gestión Canequitas</span>
           </v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn @click="salir()" icon class="mr-5" v-if="logueado">
-            <v-icon>logout</v-icon> Salir
+            <v-icon class="mr-3">fas fa-door-closed</v-icon> Salir
           </v-btn>
           <v-btn :to="{ name: 'login' }" icon class="mr-5" v-else>
-            <v-icon>apps</v-icon> Login
+            <v-icon class="mr-3">fas fa-door-open</v-icon> Login
           </v-btn>
         </v-app-bar>
         <v-content>
@@ -286,11 +287,21 @@
           </v-container>
         </v-content>
         <v-footer height="auto">
-          <v-layout justify-center>
-            <v-flex text-xs-center>
-              <v-card flat tile color="green darken-1" class="white--text">
-                <v-card-text id="copyr" class="white--text pt-0 text-center">
-                  Proyecto final &copy; 2020
+          <v-layout>
+            <v-flex>
+              <v-card flat tile color="green darken-1" class="d-flex">
+                <v-card-text
+                  id="copyr"
+                  class="d-flex white--text align-center justify-center"
+                >
+                  <span>© 2020 Copyright</span>
+                  <span class="mr-2 ml-2">-</span>
+                  <span class="footer__span">
+                    <i class="fab fa-github"></i>
+                    <a class="footer-ul__link" href="https://github.com/rgallov/Semana-4">
+                      GitHub</a
+                    >
+                  </span>
                 </v-card-text>
               </v-card>
             </v-flex>
@@ -341,7 +352,7 @@ export default {
 <style scoped>
 .imagen {
   width: 1600px;
-  height: 400px;
+  height: 250px;
 }
 
 .imagen_calidad {
@@ -358,7 +369,7 @@ body {
 }
 
 .contenedor-main {
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
     circle at 45.98% 27.21%,
     #2cd7cd 0,
     #24c2c2 12.5%,
@@ -368,9 +379,9 @@ body {
     #30525b 62.5%,
     #2b3a40 75%,
     #242728 87.5%,
-    #1c1815 100%
-  );
-
+    #1c1815 100% 
+  );*/
+  background-color: #fff;
   box-shadow: 0px 0px 20px black;
   z-index: 12;
   position: relative;
@@ -406,5 +417,10 @@ body {
 
 .footer-copyright {
   background-color: #03293e;
+}
+
+.bg-title {
+  background-color: #165231;
+  color: white;
 }
 </style>

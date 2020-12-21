@@ -406,7 +406,7 @@ body {
 }
 
 .footer-container {
-  background-color: #03293e;
+  background-color: #165231;
 }
 
 #SAS,
@@ -415,11 +415,11 @@ body {
 }
 
 .navbar {
-  background-color: #03293e;
+  background-color: #165231;
 }
 
 .footer-copyright {
-  background-color: #03293e;
+  background-color: #165231;
 }
 
 .bg-title {

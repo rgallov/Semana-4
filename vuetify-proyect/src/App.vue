@@ -2,7 +2,9 @@
   <div class="">
     <div v-if="estado" class="contenedor-main">
       <header>
-        <nav class="navbar navbar-expand-lg sticky-top navbar-dark p-4 mt-3 mb-3">
+        <nav
+          class="bg-navbar navbar navbar-expand-lg sticky-top navbar-dark p-4 mt-3 mb-3"
+        >
           <a class="navbar-brand" href="# ">
             <img
               src="./assets/images/canequita2.png"
@@ -28,6 +30,7 @@
               </li>
               <li class="nav-item active">
                 <a class="btn btn-outline-success" v-on:click="ingresar" href="# "
+                  ><i class="fas fa-house-user mr-2" aria-hidden="true"></i
                   ><b>Sistema</b> <span class="sr-only">(current)</span></a
                 >
               </li>
@@ -422,5 +425,9 @@ body {
 .bg-title {
   background-color: #165231;
   color: white;
+}
+
+.bg-navbar {
+  background-color: #165231;
 }
 </style>

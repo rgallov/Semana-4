@@ -58,6 +58,15 @@ const routes = [{
         }
 
     },
+    {
+        path: "/secure",
+        name: "secure",
+        component: Secure,
+        meta: {
+            public: true
+        }
+
+    },
 
 ];
 

@@ -367,23 +367,7 @@ export default {
   height: 35px;
 }
 
-body {
-  width: 1200px;
-}
-
 .contenedor-main {
-  /* background-image: radial-gradient(
-    circle at 45.98% 27.21%,
-    #2cd7cd 0,
-    #24c2c2 12.5%,
-    #27a9b0 25%,
-    #2d8d98 37.5%,
-    #316f7a 50%,
-    #30525b 62.5%,
-    #2b3a40 75%,
-    #242728 87.5%,
-    #1c1815 100% 
-  );*/
   background-color: #fff;
   box-shadow: 0px 0px 20px black;
   z-index: 12;
@@ -400,7 +384,6 @@ body {
   padding: 6px 11px;
   color: #337ab7;
   font-weight: 700;
-  /* float: right; */
   border-top: 2px solid blue;
   box-shadow: 0 0 5px black;
 }
